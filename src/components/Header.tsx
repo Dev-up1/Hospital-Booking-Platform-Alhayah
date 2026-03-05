@@ -74,16 +74,16 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
             <div className="flex items-center gap-4">
               {user ? (
                 <div className="flex items-center gap-3">
-                  <button
-                    onClick={() => onNavigate('patient-dashboard')}
-                    className="hidden sm:flex items-center gap-2 text-right hover:text-blue-600 transition-colors"
-                  >
+                  {/* --- بداية التعديل: تم تحويل الزر إلى div وإلغاء النقر --- */}
+                  <div className="hidden sm:flex items-center gap-2 text-right">
                     <User className="w-4 h-4 text-blue-600" />
                     <div className="text-right">
                       <p className="text-sm font-medium">{user.name}</p>
                       <p className="text-xs text-gray-600">مريض</p>
                     </div>
-                  </button>
+                  </div>
+                  {/* --- نهاية التعديل --- */}
+                  
                   <Button
                     variant="outline"
                     size="sm"
