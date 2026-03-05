@@ -40,8 +40,7 @@ export function Header({ currentPage, onNavigate, user, onLogin, onLogout }: Hea
   const handleDashboardClick = () => {
     if (user?.role === 'doctor') {
       onNavigate('doctor-dashboard');
-    } else {
-      onNavigate('patient-dashboard');
+    
     }
   };
 
